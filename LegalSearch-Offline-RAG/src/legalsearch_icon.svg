@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0d1f33"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8c46a"/>
+      <stop offset="50%" stop-color="#b08457"/>
+      <stop offset="100%" stop-color="#c9a84c"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0d080"/>
+      <stop offset="100%" stop-color="#b08457"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20395a"/>
+      <stop offset="100%" stop-color="#162840"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="roundClip">
+      <rect width="512" height="512" rx="96" ry="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid texture -->
+  <g opacity="0.06" stroke="#b08457" stroke-width="1">
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+  </g>
+
+  <!-- Corner circuit dots -->
+  <circle cx="80" cy="80" r="4" fill="#b08457" opacity="0.4"/>
+  <circle cx="432" cy="80" r="4" fill="#b08457" opacity="0.4"/>
+  <circle cx="80" cy="432" r="4" fill="#b08457" opacity="0.4"/>
+  <circle cx="432" cy="432" r="4" fill="#b08457" opacity="0.4"/>
+
+  <!-- Shield shape (legal) -->
+  <path d="M256 68 L340 100 L340 210 Q340 295 256 340 Q172 295 172 210 L172 100 Z"
+        fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="3" filter="url(#softShadow)"/>
+
+  <!-- Shield inner border -->
+  <path d="M256 84 L328 112 L328 208 Q328 280 256 320 Q184 280 184 208 L184 112 Z"
+        fill="none" stroke="url(#goldGrad2)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Scales of justice - horizontal bar -->
+  <rect x="218" y="148" width="76" height="5" rx="2.5" fill="url(#goldGrad)" filter="url(#glow)"/>
+
+  <!-- Scales center pole -->
+  <rect x="253.5" y="130" width="5" height="80" rx="2.5" fill="url(#goldGrad)"/>
+
+  <!-- Left scale chain -->
+  <line x1="222" y1="151" x2="210" y2="175" stroke="url(#goldGrad)" stroke-width="2" opacity="0.9"/>
+  <!-- Right scale chain -->
+  <line x1="290" y1="151" x2="302" y2="175" stroke="url(#goldGrad)" stroke-width="2" opacity="0.9"/>
+
+  <!-- Left pan -->
+  <path d="M198 175 Q210 180 222 175" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right pan -->
+  <path d="M290 175 Q302 180 314 175" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Top sphere on pole -->
+  <circle cx="256" cy="130" r="6" fill="url(#goldGrad)" filter="url(#glow)"/>
+
+  <!-- Circuit / AI nodes below scales -->
+  <circle cx="220" cy="245" r="5" fill="none" stroke="#b08457" stroke-width="2" opacity="0.8"/>
+  <circle cx="256" cy="255" r="5" fill="none" stroke="#b08457" stroke-width="2" opacity="0.8"/>
+  <circle cx="292" cy="245" r="5" fill="none" stroke="#b08457" stroke-width="2" opacity="0.8"/>
+
+  <!-- Connecting lines between nodes -->
+  <line x1="225" y1="245" x2="251" y2="253" stroke="#b08457" stroke-width="1.5" opacity="0.6"/>
+  <line x1="261" y1="253" x2="287" y2="247" stroke="#b08457" stroke-width="1.5" opacity="0.6"/>
+  <line x1="220" y1="250" x2="220" y2="270" stroke="#b08457" stroke-width="1.5" opacity="0.5"/>
+  <line x1="256" y1="260" x2="256" y2="275" stroke="#b08457" stroke-width="1.5" opacity="0.5"/>
+  <line x1="292" y1="250" x2="292" y2="270" stroke="#b08457" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Document lines inside shield -->
+  <rect x="228" y="275" width="56" height="3" rx="1.5" fill="#b08457" opacity="0.5"/>
+  <rect x="234" y="283" width="44" height="3" rx="1.5" fill="#b08457" opacity="0.4"/>
+  <rect x="240" y="291" width="32" height="3" rx="1.5" fill="#b08457" opacity="0.3"/>
+
+  <!-- Bottom text area -->
+  <rect x="80" y="375" width="352" height="2" fill="url(#goldGrad)" opacity="0.4"/>
+
+  <!-- LS text -->
+  <text x="256" y="430" font-family="Georgia, serif" font-size="52" font-weight="700"
+        fill="url(#goldGrad)" text-anchor="middle" letter-spacing="8" filter="url(#glow)">LS</text>
+
+  <!-- Subtitle -->
+  <text x="256" y="458" font-family="Georgia, serif" font-size="16"
+        fill="#b08457" text-anchor="middle" letter-spacing="4" opacity="0.8">OFFLINE</text>
+
+  <!-- Top accent line -->
+  <rect x="176" y="58" width="160" height="2" rx="1" fill="url(#goldGrad)" opacity="0.5"/>
+</svg>

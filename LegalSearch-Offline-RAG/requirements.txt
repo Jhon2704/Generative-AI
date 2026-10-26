@@ -1,0 +1,5 @@
+PySide6>=6.7,<6.9
+chromadb>=0.5.5,<0.7
+pypdf>=4.2,<6
+requests>=2.31,<3
+streamlit>=1.36,<2

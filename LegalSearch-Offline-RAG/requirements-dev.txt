@@ -1,0 +1,7 @@
+-r requirements.txt
+
+pyinstaller>=6.10,<7
+pytest>=8.2,<9
+ruff>=0.6,<1
+cairosvg>=2.7
+Pillow>=10
