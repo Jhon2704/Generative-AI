@@ -1,0 +1,38 @@
+.states
+assets/external/
+*.db
+*.py[cod]
+.web
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Variables de entorno (NUNCA subir)
+.env
+.env.local
+.env.production
+
+# Reflex
+.web/
+__pycache__/
+*.pyc
+*.pyo
+constellation.db
+constellation.db-journal
+
+# Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

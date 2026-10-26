@@ -1,0 +1,12 @@
+.git
+.venv
+.vscode
+.states
+.web
+__pycache__
+*.pyc
+*.pyo
+*.db
+.env
+uploaded_files
+constellation guide.mp4
